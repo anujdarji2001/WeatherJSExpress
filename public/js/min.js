@@ -25,13 +25,12 @@ const getInfo = async(event) => {
             city_name.innerText=`${arrdata[0].name}, ${arrdata[0].sys.country}`;
 
             const tempMood = arrdata[0].weather[0].main;
-
             if(tempMood == "Clear"){
                 temp_status.innerHTML = "<i class= 'fas fa-sun' style = 'color: #eccc68;'></i>";
             }else if(tempMood == "Clouds"){
                 temp_status.innerHTML = "<i class= 'fas fa-cloud' style = 'color: #f1f2f6;'></i>";
             }else if(tempMood == "Rain"){
-                temp_status.innerHTML = "<i class= 'fas fa-rain' style = 'color: #a4b0be;'></i>";
+                temp_status.innerHTML = "<i class='fas fa-cloud-rain' style = 'color: #a4b0be;'></i>";
             }else {
                 temp_status.innerHTML = "<i class= 'fas fa-cloud' style = 'color: #f1f2f6;'></i>";
             }
